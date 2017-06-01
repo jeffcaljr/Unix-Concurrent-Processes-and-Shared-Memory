@@ -1,0 +1,14 @@
+Author: Jeffery Calhoun
+Course: CS 4760 Operating Systems Section 2 (TTh 9:30-10:45am)
+Date: 10/05/2016
+
+
+Makefile BEING PRESENT IN DIRECTORY IS CRITICAL! THAT FILE IS USED TO GENERATE SHARED MEMORY KEYS
+
+Compile all sources with make
+'make clean' will remove all files in directory except cpp files, Makefile, and README
+
+-Made assumption that no more than 20 child processes in system DOES NOT INCLUDE PARENT
+-Made assumption in code that name of output file is 25 chars or less
+-Timer doesnt start until all shared memory is allocated, just before slaves start spawning
+-Timer is really just a signal handler that checks if currentTime - startTime > MAX_RUN_TIME
